@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+    <title> XboxGamePass</title>
+    <meta http-equiv="Content-Type" cotent="text/html;charset=uft-8"/>
+    <link rel="icon" type="imge/png" href="img/LoogoEmpresa1.png"/>
+    <a href="Index.html">Inicio</a>
+    <style type="text/css">
+        body{
+            front: 13px/1.6 Tahoma,sans-serif;
+            background:linear-gradient(to right,  hsla(0, 0%, 0%, 0.664),hsla(0, 0%, 0%, 0.664)),url(img/imgPortadaFormulario.jpg);
+            background-size: cover;
+        }
+    
+        h1{
+            color: white;
+            text-align: center;
+                    }
+        a{
+            color: white;
+            text-decoration: dashed;
+        }
+        .izquierda{
+            float: left;
+            clear: left;
+            color: rgb(255, 255, 255);
+        }
+        .derecha{
+            float:right;
+            clear: right;
+            color: rgb(255, 255, 255);
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #contenedor{
+            background:linear-gradient(rgba(0, 0, 0, 0));
+            border: 1px solid #ffffffb3;
+            margin: 1em auto;
+            padding: 1em;
+            width: 768px;
+            border-radius: 2em;
+        }
+        span.requerido{
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        h2{
+            font: normal 2em arial, sans-serif;
+            margin: 0;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        
+        }
+        ul li.botones{
+            border-top: 2px solid #ffffff;
+            clear: both;
+            float: none;
+            padding: 1em 0;
+            margin-top: 1em;
+            text-align: right;
+            width: 100%;
+        }
+        ul li.botones input{
+            font-size: 1.3em;
+        }
+        ul li{
+            margin: 0.5em 0;
+            padding: 0.5em;
+            width: 46%;
+        }
+        ul li label titulo{
+            font-weight: bold;
+        }
+        ul li div span{
+            float: left;
+            padding: 0.3em 0;
+        }
+        ul li div span.completo{
+            width: 100%;
+        }
+        ul li div span.mitad{
+            width: 50%;
+        }
+        ul li div span.tercio{
+            width: 33%;
+        }
+        ul li div span.dostercios{
+            width: 66%;
+        }
+        ul li div span label{
+            display: block;
+            font: normal 0.8em arial, sans-serif;
+            color:rgb(172, 172, 172);
+        }
+        ul li p.ayuda{
+            display: none;
+        }
+        ul li input{
+            padding: 0.2em;
+        }
+        input#apellido1, input#apellido2, input#direccion, input#email{
+            width: 260px;
+        }
+        input#codigopostal{
+            width: 80px;
+        }
+        select#provincia{
+            width: 90px;
+        }
+        select#pais{
+            width: 150px;
+        }
+        input#telefonofijo, input#telefonomovil{
+            width: 135px;
+        }
+        /*Cambiar color en el: hover y esaltar los campos en el: focus */
+        ul li:hover{
+            background-color: rgba(0, 121, 0, 0.253);
+
+        }
+        ul li.botones:hover{
+            background-color: transparent;
+        }
+        ul li input:focus{
+            border: 2px solid #00ad1d;
+        }
+        /*Formatear el formulario a una columna */
+        ul li.izquierda, ul li.derecha{
+            float: none;
+            width: auto;
+        }
+        ul li{
+            overflow: hidden;
+        }
+        ul li label.titulo{
+            float: left;
+            width: 150px;
+        }
+        ul li div{
+            margin-left: 160px;
+        }
+        /*Aspecto final de l formulario con los mensajes de ayuda */
+        h2{
+            margin-bottom: 0.3em;
+        }
+        ul li{
+            border-top: 1px solid #ffffff;
+            margin: 0;
+            padding: 1em;
+        }
+        ul li.botones{
+            margin: 0;
+        }
+        ul li label.titulo{
+            text-align: right;
+            width: 100px;
+        }
+        ul li div{
+            margin-left: 110px;
+            overflow: hidden;
+        }
+        ul li{
+            position: relative;
+        }
+        ul li:hover p.ayuda{
+            display: block;
+            margin: 0.3em;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+        }
+        .mitad{
+            color:white;
+            
+        }
+        .ayuda{
+            color: white;
+        }
+        h6{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <h2>Game Pass</h2>
+        <form method="post" action="#">
+            <ul>
+                <li class="izquierda">
+                    <label class="titulo" for="Nombre">Nombre y apellidos<span class="requerido">*</span></label>
+                    <div>
+                        <span class="completo">
+                            <input id="nombre" name="nombre"type="text"  placeholder="Nombre completo" required autofocus>
+                            <label for="nombre">Nombre</label>
+                        </span>
+                        <span class="completo">
+                            <input id="apellido1" name="apellido1" type="text" placeholder="Primer pellido" required autofocus>
+							<label for="nombre">Primer Apellido</label>
+                        </span>
+                        <span class="completo">
+                            <input id="apellido2" name="apellido2" type="text" placeholder="Segundo apellido" required autofocus>
+							<label for="nombre">Suegundo Apellido</label>
+                        </span>
+                        
+                    </div>
+                <p class="ayuda">No te olvides de escribir tambien tu segundo apellido</p>
+                </li>
+                <li class="derecha">
+                    <label class="titulo" for="direccion">Direccion<span class="requerido">*</span></label>
+                    <div>
+                        <span class="completo">
+                            <input id="direccion" name="direccion" type="text" placeholder="Direccion" required autofocus/>
+                            <label for="direccion">Calle y numero</label>
+                        </span>
+                        <span class="tercio">
+                            <input id="codigopostal" name="codigopostal" type="text" maxlength="5"  placeholder="99000" required autofocus/>
+                            <label form="codigopostal">Codigo Postal</label>
+                        </span>
+                        <span class="dostercios">
+                            <input id="municipio" name="municipio" type="text" placeholder="Municipio" required autofocus/>
+                            <label for="municipio">Municipio</label>
+                        </span>
+                        <span class="tercio">
+                            <select id="estado" name="estado" type="text" required>
+                                <option value=""></option>
+                                <option value="Zacatecas">Zacatecas</option>
+                                <option value="Chihuhua">Chihuhua</option>
+                                <option value="Aguascalientes">Aguascalientes</option>
+                            </select>
+                            <label for="estado">Estado</label>
+                        </span>
+                        <span class="dostercios">
+                            <select id="pais" name="pais" type="text" required>
+                                <option value=""></option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Canada">Canada</option>
+                                <option value="USA">USA</option>
+                            </select>
+                            <label for="pais">Pais</label>
+                        </span>
+                    </div>
+                    <p class="ayuda">El codigo postal es obligatorio para poder recibir los pedidos y hacerte llegar tu procuto comptrado</p>
+                </li>
+                <li class="izquierda">
+                    <label class="titulo" for="email">Correo <span class="requerido">*</span></label>
+                    <div>
+                        <span class="completo">
+                            <input id="email" name="email" type="email" placeholder="ejemplo@Outllok.com" required>
+                        </span>
+                    </div>
+                    <p class="ayuda">Asegurate de que sea  con outlook.com</p>
+                    
+                </li>
+                <li class="derecha"></li>
+                <label class="titulo" for="numbertarjeta" value=""/>
+                <div>
+                    <span class="mitad">
+                        <input id="numtarjeta" name="numtarjeta" type="text" maxlength="19" placeholder="Ej. 5555-4444-3333-2222" required>
+                        <label for="numtarjeta">Introdusca numero de Tarjeta </label>
+
+                    </span>
+                    <span class="mitad">
+                        <input id="numcvv" name="numcvv" type="text" maxlength="3" placeholder="Ej.123" required>
+                        <label for="numcvv">CVV</label>
+                    </span>
+                </div>
+                <p class="ayuda">La tarjeta sirve para pagar e monto  </p>
+            </li>
+            <li class="botones">
+                <input id="alta" type="reset" value="Reiniciar &rarr;"/>
+                <input id="alta" type="submit" value="Suscribirme &rarr;"/>
+            </li>      
+            </ul>
+        </form>
+    </div>
+</body>
+<h6><p><center>Materia:SERVIDOR
+    ALUMNO:Pedro Angel Rojas Saucedo;
+    DOCENTE:Ma.Eugenia Acuña Reyes;
+    08/06/2022</center></p></h6>
+</html>
